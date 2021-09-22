@@ -7,14 +7,18 @@
     <title>Exercício 004 - JavaScript</title>
 </head>
 <body>
-    <h1>Nome do usuário - v2.0 &#x270C;</h1>
-    <button onclick="identificar()">Iniciar</button>
-    <p id="frase">Clique no botão acima e veja a mágica aconter...</p>
+    <h1>
+        Nome do Usuário - v2.0 &#x270C;
+    </h1>
+    <button onclick="perguntar()">
+        Clica em mim
+    </button>
+    <p id="frase">Clique no botão e veja a mágica acontecer...</p>
     <script>
-        function identificar() {
+        function perguntar() {
             let nome = window.prompt("Qual é o seu nome?")
-            let txt = document.getElementById("frase")
-            txt.innerHTML = `Olá, <strong>${nome}</strong>! É um grande prazer te conhecer &#x1F601;`
+            let resp = document.getElementById("frase")
+            resp.innerHTML = `Olá, <strong>${nome}</strong>! Tudo bem com você? &#x1F609;`
         }
     </script>
 </body>
