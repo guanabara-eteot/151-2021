@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(58, 183, 255), rgb(13, 71, 119));
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Antes e Depois</h1>
+        <form action="salvar.php" method="get" onsubmit="return mostrar()">
+            <label for="n">Número</label>
+            <input type="number" name="n" id="n" min="0" max="1000" value="0">
+            <input type="submit" value="Ok">
+        </form>
+        <p id="r">Resultado final</p>
+    </main>
+    <script>
+        function mostrar() {
+            let num = Number(document.getElementById("n").value)
+            let res = document.getElementById("r")
+            res.innerHTML = `O antecessor é ${num-1} e o sucessor é ${num+1}`
+            return false
+        }
+    </script>
+</body>
+</html>
