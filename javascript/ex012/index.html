@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+    <main>
+        <h1>Par ou Ímpar?</h1>
+        <form action="verifica.php" method="get" onsubmit="return parouimpar()">
+            <label for="num">Número: </label>
+            <input type="number" name="num" id="num" min="0" max="1000" value="0">
+            <input type="submit" value="Par ou Ímpar?">
+        </form>
+        <p id="res">O resultado vem aqui...</p>
+    </main>
+    <script>
+        function parouimpar() {
+            let n = Number(document.getElementById("num").value)
+            let res = document.getElementById("res")
+            if (n % 2 == 0) {
+                res.innerHTML = `O número ${n} é PAR!`
+            } else if (n % 2 == 1) {
+                res.innerHTML = `O número ${n} é ÍMPAR!`
+            }
+            return false
+        }
+    </script>
+</body>
+</html>
