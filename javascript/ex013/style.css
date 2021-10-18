@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkslategray;
+}
+
+main, section {
+    background-color: white;
+    max-width: 500px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+section#resposta {
+    visibility: hidden;
+}
