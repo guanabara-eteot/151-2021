@@ -96,7 +96,7 @@ function naturalidade() {
     let painel = document.getElementById("resposta")
     let frase = document.getElementById("natural")
     
-    frase.innerHTML = `Quem nasce no estado <strong>${estado}</strong> tem Naturalidade <strong>${natu}</strong>!`
+    frase.innerHTML = `Quem nasce no estado <strong>${estado}</strong> dizemos ser <strong>${natu}</strong>!`
     painel.style.visibility = "visible"
     
     return false
